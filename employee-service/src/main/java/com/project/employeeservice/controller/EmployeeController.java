@@ -19,4 +19,10 @@ public class EmployeeController {
         EmployeeDTO employeeDTO=employeeService.getEmployeeInfo(email);
         return ResponseEntity.status(HttpStatus.OK).body(employeeDTO);
     }
+
+    @GetMapping("/")
+    public String hello()
+    {
+        return "Hello";
+    }
 }
