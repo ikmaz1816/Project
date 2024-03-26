@@ -17,6 +17,6 @@ public class EmployeeService implements IEmployee {
         Employee employee=this.employeeRepository.findByEmail(email)
                 .orElseThrow(()->new EmployeeNotFoundException("Employee Not Found"));
         return new EmployeeDTO(employee.getId(), employee.getFirstname(),
-                employee.getLastname(), employee.getHobbies(), employee.getEmail(), employee.getRole());
+                employee.getLastname(), employee.getHobbies(), employee.getEmail());
     }
 }

@@ -33,6 +33,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(request -> request
                                 .requestMatchers("/employee/")
                                 .permitAll()
+                                .requestMatchers("/employee/demo").hasAnyRole("USER")
                                 .anyRequest().authenticated()
                         )
                 .sessionManagement(httpSecuritySessionManagementConfigurer ->

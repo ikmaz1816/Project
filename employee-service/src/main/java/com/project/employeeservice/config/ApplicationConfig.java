@@ -26,7 +26,6 @@ public class ApplicationConfig {
                 .orElseThrow(()-> new EmployeeNotFoundException("Employee Not Found"));
 
     }
-
     @Bean
     public PasswordEncoder passwordEncoder()
     {

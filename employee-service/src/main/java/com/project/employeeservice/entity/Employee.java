@@ -1,6 +1,5 @@
 package com.project.employeeservice.entity;
 
-import com.project.employeeservice.enums.Roles;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -38,12 +37,9 @@ public class Employee implements UserDetails
     @Column(nullable = false)
     private String skills;
 
-    @Enumerated(EnumType.STRING)
-    private Roles role;
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return role.getAuthorities();
+        return null;
     }
 
     @Override
