@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: idp-service
+  config:
+    import: "optional:configserver:http://localhost:8088"
