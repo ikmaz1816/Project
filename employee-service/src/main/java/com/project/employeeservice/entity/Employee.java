@@ -28,9 +28,6 @@ public class Employee implements UserDetails
     @Column(nullable = false,unique = true)
     private String email;
 
-    @Column(nullable = false)
-    private String password;
-
     @Column(nullable=false)
     private String hobbies;
 
@@ -44,7 +41,7 @@ public class Employee implements UserDetails
 
     @Override
     public String getPassword() {
-        return this.password;
+        return null;
     }
 
     @Override
