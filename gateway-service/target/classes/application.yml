@@ -14,7 +14,3 @@ spring:
           uri: lb://idp-service
           predicates:
             - Path=/identity/**
-        - id: employee-leave
-          uri: lb://employee-leave
-          predicates:
-            - Path=/leave/**
